@@ -1,0 +1,153 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+body{
+  background-color: rgb(248, 187, 126);
+  font-family: Montserrat;
+}
+
+.random__text{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.random__result{
+  font-size: 50px;
+  font-weight: 700;
+  height: 100px;
+  
+}
+
+.random__form{
+  margin-bottom: 20px;
+}
+.random{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.random__label{
+	display: flex;
+	flex-direction: column;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.random__button{
+  border: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: rgb(253, 178, 104);
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
+}
+
+.random__button:hover{
+  background-color: rgb(252, 170, 89);
+}
+
+.random__input{
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+  background-color: rgb(253, 178, 104);
+  padding: 5px 10px;
+}
+
+.random__input:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.random__input::placeholder{
+  font-size: 15px;
+  color: #000000c7;
+  font-weight: 500;
+}
